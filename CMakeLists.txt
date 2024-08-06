@@ -10,6 +10,7 @@ set(TESTS_LIST "")
 
 add_subdirectory(homework1)
 add_subdirectory(homework2)
+add_subdirectory(homework3)
 
 find_package(OpenSSL REQUIRED)
 
