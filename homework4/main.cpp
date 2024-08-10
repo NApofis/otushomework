@@ -9,33 +9,6 @@
 #include <tuple>
 #include <type_traits>
 
-#include <array>
-#include <cstddef>
-#include <iostream>
-#include <tuple>
-#include <utility>
-
-template <class Typle, std::size_t N>
-struct TuplePrint
-{
-    static void print(const Typle& t)
-    {
-        TuplePrint<Typle, N - 1>::print(t);
-        std::cout << "." << std::get<N-1>(t);
-    }
-};
-
-
-template <class Tuple>
-struct TuplePrint<Tuple, 1>
-{
-    static void print(const Tuple& t)
-    {
-        std::cout << std::get<0>(t);
-    }
-};
-
-
 template <typename... Ts>
 struct same_types
 {
@@ -49,16 +22,40 @@ struct same_types<T, U, Ts...>
 };
 
 
+template <size_t N, typename... Ts>
+struct check_size
+{
+    static const bool value = N < sizeof...(Ts) - 1;
+};
+
+
 template <
     template <class ... Ts> typename T,
+    std::size_t N = 0,
     typename ... Ts,
+    std::enable_if_t<!check_size<N, Ts...>::value, bool> = true,
     std::enable_if_t<
         std::is_same<T<Ts ...>, std::tuple<Ts ...>
     >::value && same_types<Ts ...>::value, bool> = true
 >
 void print_ip(T<Ts ...> ip)
 {
-    TuplePrint<T<Ts...>, sizeof...(Ts)>::print(ip);
+    std::cout << std::get<N>(ip) << std::endl;
+}
+
+template <
+    template <class ... Ts> typename T,
+    std::size_t N = 0,
+    typename ... Ts,
+    std::enable_if_t<check_size<N, Ts...>::value, bool> = true,
+    std::enable_if_t<
+        std::is_same<T<Ts ...>, std::tuple<Ts ...>
+    >::value && same_types<Ts ...>::value, bool> = true
+>
+void print_ip(T<Ts ...> ip)
+{
+    std::cout << std::get<N>(ip) << ".";
+    print_ip<T, N + 1, Ts...>(ip);
 }
 
 
@@ -122,7 +119,6 @@ void print_ip(T<Type, Allocator> ip)
 
 int main()
 {
-
     print_ip( int8_t{-1} ); // 255
     print_ip( int16_t{0} ); // 0.0
     print_ip( int32_t{2130706433} ); // 127.0.0.1
