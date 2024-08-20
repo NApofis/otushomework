@@ -2,8 +2,7 @@
 // Created by ntikhonov on 15.08.24.
 //
 
-#ifndef DOCUMENTHANDLER_H
-#define DOCUMENTHANDLER_H
+#pragma once
 
 #include "models/document.h"
 
@@ -60,5 +59,3 @@ public:
     }
 
 };
-
-#endif //DOCUMENTHANDLER_H
