@@ -16,6 +16,7 @@ add_subdirectory(homework4)
 add_subdirectory(homework5)
 add_subdirectory(homework6)
 add_subdirectory(homework7)
+add_subdirectory(homework8)
 
 find_package(OpenSSL REQUIRED)
 
