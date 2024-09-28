@@ -43,6 +43,7 @@ target_link_libraries( ${PROJECT_NAME} PRIVATE
         Boost::detail
         Boost::mpl
         Boost::flyweight
+        Boost::regex
 )
 
 set_target_properties(${PROJECT_NAME} PROPERTIES

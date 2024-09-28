@@ -27,7 +27,7 @@ int main(int argc, const char * argv[])
 
     desc.add_options()
         ("help,h", "this message")
-        ((dir + ",d").c_str(), boost::program_options::value<std::vector<std::string>>(&build.dir())->multitoken()->required(), "Каталог для сканирования дубликатов.")
+        ((dir + ",d").c_str(), boost::program_options::value<std::vector<std::string>>(&build.dir())->multitoken(), "Каталог для сканирования дубликатов.")
         ((exc + ",e").c_str(), boost::program_options::value<std::vector<std::string>>(&build.exc())->multitoken(), "Каталог для исключения из сканирования. Значения могут быть разделены через ,.")
         ((level + ",l").c_str(), boost::program_options::value<unsigned short>(&build.level())->default_value(0), "Уровень сканирования. 0 - только указанный каталог без вложенных, >=1 - рекурсивный проход вглубь")
         ((size + ",m").c_str(), boost::program_options::value<unsigned int>(&build.min_size())->default_value(1), "Минимальный размер файла")
