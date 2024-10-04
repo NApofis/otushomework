@@ -4,12 +4,14 @@
 
 #include "block.h"
 
+#include <sstream>
+
 void Command::show(std::basic_ostream<char>& out)
 {
     out << command;
 }
 
-bool Block::add_command(std::shared_ptr<Command> command)
+bool CommandBlock::add_command(std::shared_ptr<Command> command)
 {
     if(childrens.empty())
     {
@@ -19,13 +21,22 @@ bool Block::add_command(std::shared_ptr<Command> command)
     return childrens.size() != count;
 }
 
-void Block::show(iWriter* writer)
+void CommandBlock::show()
+{
+    for (const auto& subscriber : subscribers)
+    {
+        subscriber->write(*this);
+    }
+}
+
+std::string CommandBlock::data_to_string() const
 {
     if(childrens.empty())
     {
-        return;
+        return "";
     }
-    std::basic_ostream<char>& out = writer->open();
+
+    std::stringstream out;
     out << "bulk: ";
     for (const auto& command : childrens)
     {
@@ -36,10 +47,10 @@ void Block::show(iWriter* writer)
         }
     }
     out << std::endl;
-    writer->close();
+    return out.str();
 }
 
-bool Block::remove_insider()
+bool CommandBlock::remove_insider()
 {
     if(inside_block)
     {
@@ -49,7 +60,7 @@ bool Block::remove_insider()
     return false;
 }
 
-void Block::clear()
+void CommandBlock::clear()
 {
     childrens.clear();
 }

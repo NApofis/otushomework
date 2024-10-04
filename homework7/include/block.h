@@ -19,9 +19,9 @@ public:
 
 
 enum class Types : uint8_t {base, dynamic};
-class Block
+class CommandBlock
 {
-
+    std::vector<std::unique_ptr<iWriter>> subscribers;
     std::vector<std::shared_ptr<Command>> childrens;
     Types type = Types::base;
     std::string time_created;
@@ -29,9 +29,10 @@ class Block
     unsigned short inside_block = 0;
 
 public:
-    explicit Block(int count) : count(count) {};
+    explicit CommandBlock(int count) : count(count) {};
 
-    void show(iWriter* writer);
+    void show();
+    std::string data_to_string() const;
     void clear();
     bool add_command(std::shared_ptr<Command> command);
     std::string get_time_created() const {return time_created; }
@@ -41,6 +42,9 @@ public:
 
     void add_insider() { inside_block++; }
     bool remove_insider();
+
+    void add_subscribe(std::unique_ptr<iWriter> writer) {subscribers.push_back(std::move(writer));}
+
 };
 
 

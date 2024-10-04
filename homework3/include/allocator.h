@@ -66,7 +66,7 @@ public:
 
 // Класс для работы с блоками который лежат в "куске" памяти.
 // Структура блока | размер блока [size_t] | флаг используется блок или нет [bool] | данные блока [void] | следующий блок | ... |
-class Block
+class CommandBlock
 {
 
     friend OneChunk;
@@ -74,9 +74,9 @@ class Block
     using size_type = size_t;
     using used_type = bool;
 
-    Block() = default;
-    explicit Block(void* ptr) : block(ptr){};
-    explicit Block(void* ptr, const size_t& n) : block(ptr)
+    CommandBlock() = default;
+    explicit CommandBlock(void* ptr) : block(ptr){};
+    explicit CommandBlock(void* ptr, const size_t& n) : block(ptr)
     {
         *bl_ptr_2_size() = n;
         *ptr_2_used() = false;
@@ -98,7 +98,7 @@ class Block
     explicit operator bool() const { return block; }
 
     // Соеденить два соседних блока
-    void join(const Block& other) const;
+    void join(const CommandBlock& other) const;
     // Разделить блок на два. Один из которых будет n байт
     void separate (const size_t& n) const;
 
@@ -138,7 +138,7 @@ struct update_allocator {
 
     update_allocator()
     {
-        start = malloc(OneChunk::inf_size(Block::inf_size(size_memery)));
+        start = malloc(OneChunk::inf_size(CommandBlock::inf_size(size_memery)));
         void* pp = malloc(sizeof(size_t));
 
         if(!start || !pp)
@@ -171,7 +171,7 @@ struct update_allocator {
     // Запросить новый кусок памяти на n байт
     void get_memory(const size_t& n) const
     {
-        void* p = malloc(OneChunk::inf_size(Block::inf_size(n)));
+        void* p = malloc(OneChunk::inf_size(CommandBlock::inf_size(n)));
         if(!p)
         {
             throw std::bad_alloc();

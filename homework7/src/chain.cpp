@@ -9,7 +9,7 @@ void LinkCommand::execute(const std::string& command)
 {
     if(!command.empty() && !block->add_command(std::make_shared<Command>(command)) && block->check_type(Types::base))
     {
-        write();
+        block->show();
         block->clear();
     }
 }
@@ -20,7 +20,7 @@ void LinkBlock::execute(const std::string& command)
     {
         if(block->check_type(Types::base))
         {
-            write();
+            block->show();
             block->clear();
             block->set_type(Types::dynamic);
         }
@@ -33,7 +33,7 @@ void LinkBlock::execute(const std::string& command)
     {
         if(!block->remove_insider())
         {
-            write();
+            block->show();
             block->clear();
             block->set_type(Types::base);
         }
@@ -48,7 +48,7 @@ void LinkClose::execute(const std::string& command)
 {
     if(command == "EOF" && block->check_type(Types::base))
     {
-        write();
+        block->show();
     }
     else
     {

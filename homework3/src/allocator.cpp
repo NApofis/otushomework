@@ -9,8 +9,8 @@ OneChunk::OneChunk(void* ptr, const size_t& n)
 {
     ch = ptr;
     *ptr_2_next_chunk() = nullptr;
-    *ch_ptr_2_size() = Block::inf_size(n);
-    Block(ch_ptr_2_data(), n);
+    *ch_ptr_2_size() = CommandBlock::inf_size(n);
+    CommandBlock(ch_ptr_2_data(), n);
 }
 
 bool OneChunk::seek()
@@ -46,15 +46,15 @@ void OneChunk::pop(const OneChunk& other)
 
 void* OneChunk::get_suitable_block(const size_t& n)
 {
-    Block best;
-    const size_t block_size = Block::inf_size(n) + 1; // 1 Байт на создание минимального блока
+    CommandBlock best;
+    const size_t block_size = CommandBlock::inf_size(n) + 1; // 1 Байт на создание минимального блока
     do
     {
         auto iter = ch_ptr_2_data();
         while(iter < (ch_ptr_2_data() + *ch_ptr_2_size()))
         {
-            Block b(iter);
-            iter += Block::inf_size(*b.bl_ptr_2_size());
+            CommandBlock b(iter);
+            iter += CommandBlock::inf_size(*b.bl_ptr_2_size());
             if(*b.ptr_2_used())
             {
                 continue;
@@ -85,7 +85,7 @@ void* OneChunk::get_suitable_block(const size_t& n)
 
 void OneChunk::remove_block(const void* p, const size_t& s)
 {
-    Block block;
+    CommandBlock block;
     do
     {
         auto iter = ch_ptr_2_data();
@@ -95,12 +95,12 @@ void OneChunk::remove_block(const void* p, const size_t& s)
         }
         while(iter <= (ch_ptr_2_data() + *ch_ptr_2_size()))
         {
-            Block previous = block;
-            block = Block(iter);
+            CommandBlock previous = block;
+            block = CommandBlock(iter);
 
             if(block.bl_ptr_2_data() != p)
             {
-                iter += Block::inf_size(*block.bl_ptr_2_size());
+                iter += CommandBlock::inf_size(*block.bl_ptr_2_size());
                 continue;
             }
 
@@ -122,7 +122,7 @@ void OneChunk::remove_block(const void* p, const size_t& s)
                 break;
             }
 
-            Block next(block.bl_ptr_2_data() + *block.bl_ptr_2_size());
+            CommandBlock next(block.bl_ptr_2_data() + *block.bl_ptr_2_size());
             if(!*next.ptr_2_used())
             {
                 // Соеденим со следующим блоком
@@ -144,8 +144,8 @@ void* OneChunk::find_empty_chunk()
 
         while(iter != (ch_ptr_2_data() + *ch_ptr_2_size()))
         {
-            Block block(iter);
-            iter += Block::inf_size(*block.bl_ptr_2_size());
+            CommandBlock block(iter);
+            iter += CommandBlock::inf_size(*block.bl_ptr_2_size());
             if(*block.ptr_2_used())
             {
                 remove = false;
@@ -165,15 +165,15 @@ void* OneChunk::find_empty_chunk()
 }
 
 
-void Block::separate(const size_t& n) const
+void CommandBlock::separate(const size_t& n) const
 {
     size_t old_size = *bl_ptr_2_size();
     *bl_ptr_2_size() = n;
-    Block(bl_ptr_2_data() + n, old_size - inf_size(n));
+    CommandBlock(bl_ptr_2_data() + n, old_size - inf_size(n));
 
 }
 
-void Block::join(const Block& other) const
+void CommandBlock::join(const CommandBlock& other) const
 {
     *bl_ptr_2_size() += inf_size(*other.bl_ptr_2_size());
 }

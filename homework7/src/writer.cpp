@@ -4,25 +4,20 @@
 
 #include "writer.h"
 
+#include <block.h>
+#include <iostream>
 #include <fstream>
 
-std::basic_ostream<char>& WriteToOutput::open()
+void WriteToOutput::write(const CommandBlock& block)
 {
-    return std::cout;
-}
-
-void WriteToOutput::close()
-{
+    std::cout << block.data_to_string();
     std::cout.flush();
 }
 
-std::basic_ostream<char>&  WriteToFile::open()
-{
-    file.open(fileName);
-    return file;
-}
 
-void WriteToFile::close()
+void WriteToFile::write(const CommandBlock& block)
 {
+    std::ofstream file(block.get_time_created());
+    file << block.data_to_string();
     file.close();
 }

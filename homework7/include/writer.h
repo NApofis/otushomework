@@ -4,32 +4,27 @@
 
 #pragma once
 #include <fstream>
-#include <iostream>
 #include <utility>
 
+class CommandBlock;
 
 class iWriter
 {
+
 public:
     virtual ~iWriter() = default;
-    virtual std::basic_ostream<char>& open() =0;
-    virtual void close() =0;
+    virtual void write(const CommandBlock& block) = 0;
+
 };
 
-class WriteToOutput : public iWriter
+class WriteToOutput final : public iWriter
 {
 public:
-    std::basic_ostream<char>& open() override;
-    void close() override;
+     void write(const CommandBlock&) override;
 };
 
-class WriteToFile : public iWriter
+class WriteToFile final : public iWriter
 {
-    std::string fileName;
-    std::ofstream file;
-
 public:
-    explicit WriteToFile(std::string fileName) : fileName(std::move(fileName)) {};
-    std::basic_ostream<char>&  open() override;
-    void close() override;
+    void write(const CommandBlock&) override;
 };
