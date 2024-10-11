@@ -1,0 +1,9 @@
+<map id="models::IShape" name="models::IShape">
+<area shape="rect" id="Node000001" title=" " alt="" coords="124,5,234,31"/>
+<area shape="rect" id="Node000002" href="$classmodels_1_1Line.html" title=" " alt="" coords="5,79,100,105"/>
+<area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="146,41,75,81,73,76,143,37"/>
+<area shape="rect" id="Node000003" href="$classmodels_1_1Square.html" title=" " alt="" coords="124,79,234,105"/>
+<area shape="poly" id="edge2_Node000001_Node000003" title=" " alt="" coords="182,46,182,79,176,79,176,46"/>
+<area shape="rect" id="Node000004" href="$classmodels_1_1Triangle.html" title=" " alt="" coords="259,79,374,105"/>
+<area shape="poly" id="edge3_Node000001_Node000004" title=" " alt="" coords="217,36,294,76,292,81,215,41"/>
+</map>

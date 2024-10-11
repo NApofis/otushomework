@@ -1,0 +1,337 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "https://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" lang="ru">
+<head>
+<meta http-equiv="Content-Type" content="text/xhtml;charset=UTF-8"/>
+<meta http-equiv="X-UA-Compatible" content="IE=11"/>
+<meta name="generator" content="Doxygen 1.12.0"/>
+<meta name="viewport" content="width=device-width, initial-scale=1"/>
+<title>Homework: Класс DocumentHandler</title>
+<link href="tabs.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="jquery.js"></script>
+<script type="text/javascript" src="dynsections.js"></script>
+<script type="text/javascript" src="clipboard.js"></script>
+<link href="navtree.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="resize.js"></script>
+<script type="text/javascript" src="cookie.js"></script>
+<link href="search/search.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="search/searchdata.js"></script>
+<script type="text/javascript" src="search/search.js"></script>
+<link href="doxygen.css" rel="stylesheet" type="text/css" />
+</head>
+<body>
+<div id="top"><!-- do not remove this div, it is closed by doxygen! -->
+<div id="titlearea">
+<table cellspacing="0" cellpadding="0">
+ <tbody>
+ <tr id="projectrow">
+  <td id="projectalign">
+   <div id="projectname">Homework
+   </div>
+  </td>
+ </tr>
+ </tbody>
+</table>
+</div>
+<!-- end header part -->
+<!-- Создано системой Doxygen 1.12.0 -->
+<script type="text/javascript">
+/* @license magnet:?xt=urn:btih:d3d9a9a6595521f9666a5e94cc830dab83b65699&amp;dn=expat.txt MIT */
+var searchBox = new SearchBox("searchBox", "search/",'.html');
+/* @license-end */
+</script>
+<script type="text/javascript">
+/* @license magnet:?xt=urn:btih:d3d9a9a6595521f9666a5e94cc830dab83b65699&amp;dn=expat.txt MIT */
+$(function() { codefold.init(0); });
+/* @license-end */
+</script>
+<script type="text/javascript" src="menudata.js"></script>
+<script type="text/javascript" src="menu.js"></script>
+<script type="text/javascript">
+/* @license magnet:?xt=urn:btih:d3d9a9a6595521f9666a5e94cc830dab83b65699&amp;dn=expat.txt MIT */
+$(function() {
+  initMenu('',true,false,'search.php','Поиск',false);
+  $(function() { init_search(); });
+});
+/* @license-end */
+</script>
+<div id="main-nav"></div>
+<script type="text/javascript">
+/* @license magnet:?xt=urn:btih:d3d9a9a6595521f9666a5e94cc830dab83b65699&amp;dn=expat.txt MIT */
+$(function(){ initResizable(false); });
+/* @license-end */
+</script>
+<!-- window showing the filter options -->
+<div id="MSearchSelectWindow"
+     onmouseover="return searchBox.OnSearchSelectShow()"
+     onmouseout="return searchBox.OnSearchSelectHide()"
+     onkeydown="return searchBox.OnSearchSelectKey(event)">
+</div>
+
+<!-- iframe showing the search results (closed by default) -->
+<div id="MSearchResultsWindow">
+<div id="MSearchResults">
+<div class="SRPage">
+<div id="SRIndex">
+<div id="SRResults"></div>
+<div class="SRStatus" id="Loading">Загрузка...</div>
+<div class="SRStatus" id="Searching">Поиск...</div>
+<div class="SRStatus" id="NoMatches">Не найдено</div>
+</div>
+</div>
+</div>
+</div>
+
+</div><!-- top -->
+<div id="doc-content">
+<div class="header">
+  <div class="summary">
+<a href="#pub-methods">Открытые члены</a> &#124;
+<a href="classDocumentHandler-members.html">Полный список членов класса</a>  </div>
+  <div class="headertitle"><div class="title">Класс DocumentHandler</div></div>
+</div><!--header-->
+<div class="contents">
+
+<p><code>#include &lt;<a class="el" href="document__handler_8h_source.html">document_handler.h</a>&gt;</code></p>
+<table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a id="pub-methods" name="pub-methods"></a>
+Открытые члены</h2></td></tr>
+<tr class="memitem:a3856429604eda1c70d8d813a45d660cb" id="r_a3856429604eda1c70d8d813a45d660cb"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a3856429604eda1c70d8d813a45d660cb">DocumentHandler</a> ()=default</td></tr>
+<tr class="separator:a3856429604eda1c70d8d813a45d660cb"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a182bf7c4d257ca75d6c04e87d4d7930a" id="r_a182bf7c4d257ca75d6c04e87d4d7930a"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a182bf7c4d257ca75d6c04e87d4d7930a">create_document</a> (std::string background, unsigned int width, unsigned int height)</td></tr>
+<tr class="separator:a182bf7c4d257ca75d6c04e87d4d7930a"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a9df33fa744a0439808405edd40fd36b9" id="r_a9df33fa744a0439808405edd40fd36b9"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a9df33fa744a0439808405edd40fd36b9">set_document</a> (std::shared_ptr&lt; <a class="el" href="structmodels_1_1document.html">models::document</a> &gt; document)</td></tr>
+<tr class="separator:a9df33fa744a0439808405edd40fd36b9"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a4c8c7578d83b02ce53e4c123ec116514" id="r_a4c8c7578d83b02ce53e4c123ec116514"><td class="memItemLeft" align="right" valign="top">std::weak_ptr&lt; <a class="el" href="structmodels_1_1document.html">models::document</a> &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a4c8c7578d83b02ce53e4c123ec116514">get_document</a> ()</td></tr>
+<tr class="separator:a4c8c7578d83b02ce53e4c123ec116514"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a5cf8a4f81de584d5c638c6d64d6f1e82" id="r_a5cf8a4f81de584d5c638c6d64d6f1e82"><td class="memItemLeft" align="right" valign="top">std::shared_ptr&lt; <a class="el" href="classmodels_1_1Square.html">models::Square</a> &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a5cf8a4f81de584d5c638c6d64d6f1e82">add_square</a> (unsigned int x, unsigned int y, unsigned int width, unsigned int height)</td></tr>
+<tr class="separator:a5cf8a4f81de584d5c638c6d64d6f1e82"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a1c6dc8734988e68f09a13f9d1e16c56e" id="r_a1c6dc8734988e68f09a13f9d1e16c56e"><td class="memItemLeft" align="right" valign="top">std::shared_ptr&lt; <a class="el" href="classmodels_1_1Triangle.html">models::Triangle</a> &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a1c6dc8734988e68f09a13f9d1e16c56e">add_triangle</a> (unsigned int x, unsigned int y, unsigned int leg1, unsigned int leg2)</td></tr>
+<tr class="separator:a1c6dc8734988e68f09a13f9d1e16c56e"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a68c99fc0f5154ee8a8ea2873564e40b5" id="r_a68c99fc0f5154ee8a8ea2873564e40b5"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a68c99fc0f5154ee8a8ea2873564e40b5">remove_shape</a> (std::shared_ptr&lt; <a class="el" href="classmodels_1_1IShape.html">models::IShape</a> &gt; shape)</td></tr>
+<tr class="separator:a68c99fc0f5154ee8a8ea2873564e40b5"><td class="memSeparator" colspan="2">&#160;</td></tr>
+</table>
+<h2 class="groupheader">Конструктор(ы)</h2>
+<a id="a3856429604eda1c70d8d813a45d660cb" name="a3856429604eda1c70d8d813a45d660cb"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a3856429604eda1c70d8d813a45d660cb">&#9670;&#160;</a></span>DocumentHandler()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">DocumentHandler::DocumentHandler </td>
+          <td>(</td>
+          <td class="paramname"><span class="paramname"><em></em></span></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">default</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<h2 class="groupheader">Методы</h2>
+<a id="a5cf8a4f81de584d5c638c6d64d6f1e82" name="a5cf8a4f81de584d5c638c6d64d6f1e82"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a5cf8a4f81de584d5c638c6d64d6f1e82">&#9670;&#160;</a></span>add_square()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">std::shared_ptr&lt; <a class="el" href="classmodels_1_1Square.html">models::Square</a> &gt; DocumentHandler::add_square </td>
+          <td>(</td>
+          <td class="paramtype">unsigned int</td>          <td class="paramname"><span class="paramname"><em>x</em></span>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">unsigned int</td>          <td class="paramname"><span class="paramname"><em>y</em></span>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">unsigned int</td>          <td class="paramname"><span class="paramname"><em>width</em></span>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">unsigned int</td>          <td class="paramname"><span class="paramname"><em>height</em></span>&#160;)</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="a1c6dc8734988e68f09a13f9d1e16c56e" name="a1c6dc8734988e68f09a13f9d1e16c56e"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a1c6dc8734988e68f09a13f9d1e16c56e">&#9670;&#160;</a></span>add_triangle()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">std::shared_ptr&lt; <a class="el" href="classmodels_1_1Triangle.html">models::Triangle</a> &gt; DocumentHandler::add_triangle </td>
+          <td>(</td>
+          <td class="paramtype">unsigned int</td>          <td class="paramname"><span class="paramname"><em>x</em></span>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">unsigned int</td>          <td class="paramname"><span class="paramname"><em>y</em></span>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">unsigned int</td>          <td class="paramname"><span class="paramname"><em>leg1</em></span>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">unsigned int</td>          <td class="paramname"><span class="paramname"><em>leg2</em></span>&#160;)</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="a182bf7c4d257ca75d6c04e87d4d7930a" name="a182bf7c4d257ca75d6c04e87d4d7930a"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a182bf7c4d257ca75d6c04e87d4d7930a">&#9670;&#160;</a></span>create_document()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">void DocumentHandler::create_document </td>
+          <td>(</td>
+          <td class="paramtype">std::string</td>          <td class="paramname"><span class="paramname"><em>background</em></span>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">unsigned int</td>          <td class="paramname"><span class="paramname"><em>width</em></span>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">unsigned int</td>          <td class="paramname"><span class="paramname"><em>height</em></span>&#160;)</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="a4c8c7578d83b02ce53e4c123ec116514" name="a4c8c7578d83b02ce53e4c123ec116514"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a4c8c7578d83b02ce53e4c123ec116514">&#9670;&#160;</a></span>get_document()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">std::weak_ptr&lt; <a class="el" href="structmodels_1_1document.html">models::document</a> &gt; DocumentHandler::get_document </td>
+          <td>(</td>
+          <td class="paramname"><span class="paramname"><em></em></span></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="a68c99fc0f5154ee8a8ea2873564e40b5" name="a68c99fc0f5154ee8a8ea2873564e40b5"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a68c99fc0f5154ee8a8ea2873564e40b5">&#9670;&#160;</a></span>remove_shape()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">void DocumentHandler::remove_shape </td>
+          <td>(</td>
+          <td class="paramtype">std::shared_ptr&lt; <a class="el" href="classmodels_1_1IShape.html">models::IShape</a> &gt;</td>          <td class="paramname"><span class="paramname"><em>shape</em></span></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="a9df33fa744a0439808405edd40fd36b9" name="a9df33fa744a0439808405edd40fd36b9"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a9df33fa744a0439808405edd40fd36b9">&#9670;&#160;</a></span>set_document()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">void DocumentHandler::set_document </td>
+          <td>(</td>
+          <td class="paramtype">std::shared_ptr&lt; <a class="el" href="structmodels_1_1document.html">models::document</a> &gt;</td>          <td class="paramname"><span class="paramname"><em>document</em></span></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<hr/>Объявления и описания членов класса находятся в файле:<ul>
+<li>homework5/controllers/<a class="el" href="document__handler_8h_source.html">document_handler.h</a></li>
+</ul>
+</div><!-- contents -->
+<!-- start footer part -->
+<hr class="footer"/><address class="footer"><small>
+Создано системой&#160;<a href="https://www.doxygen.org/index.html"><img class="footer" src="doxygen.svg" width="104" height="31" alt="doxygen"/></a> 1.12.0
+</small></address>
+</div><!-- doc-content -->
+</body>
+</html>
