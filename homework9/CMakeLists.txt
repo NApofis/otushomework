@@ -20,3 +20,5 @@ target_include_directories(async
 
 add_executable(async_example example.cpp)
 target_link_libraries(async_example PRIVATE async)
+
+install(TARGETS ${PROJECT_NAME} RUNTIME DESTINATION bin)
