@@ -7,6 +7,8 @@
 #include <sstream>
 #include <fstream>
 #include <cmath>
+#include <vector>
+#include <string.h>
 #include <iomanip>
 #include <Eigen/Dense>
 
@@ -120,7 +122,8 @@ public:
         {
             return false;
         }
-        char* token = std::strtok(line.data(), ",");
+
+        char* token = std::strtok(const_cast<char*>(line.data()), ",");
 
         std::vector<std::string> words;
         while (token != nullptr)
@@ -155,7 +158,7 @@ public:
 };
 
 
-int main(int argc, const char* argv[])
+int main(int argc, char* argv[])
 {
     if (argc != 2 && argc != 4)
     {
