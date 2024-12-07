@@ -1,0 +1,9 @@
+<map id="Иерархия классов. Графический вид." name="Иерархия классов. Графический вид.">
+<area shape="rect" id="Node000000" href="$classmodels_1_1IShape.html" title=" " alt="" coords="5,55,116,80"/>
+<area shape="rect" id="Node000001" href="$classmodels_1_1Line.html" title=" " alt="" coords="174,5,268,31"/>
+<area shape="poly" id="edge4_Node000000_Node000001" title=" " alt="" coords="118,47,176,29,178,34,120,52"/>
+<area shape="rect" id="Node000002" href="$classmodels_1_1Square.html" title=" " alt="" coords="166,55,276,80"/>
+<area shape="poly" id="edge5_Node000000_Node000002" title=" " alt="" coords="131,65,166,65,166,70,131,70"/>
+<area shape="rect" id="Node000003" href="$classmodels_1_1Triangle.html" title=" " alt="" coords="164,104,279,130"/>
+<area shape="poly" id="edge6_Node000000_Node000003" title=" " alt="" coords="120,83,178,101,176,106,118,88"/>
+</map>

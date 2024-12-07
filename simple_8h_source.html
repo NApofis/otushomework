@@ -1,0 +1,228 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "https://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" lang="ru">
+<head>
+<meta http-equiv="Content-Type" content="text/xhtml;charset=UTF-8"/>
+<meta http-equiv="X-UA-Compatible" content="IE=11"/>
+<meta name="generator" content="Doxygen 1.12.0"/>
+<meta name="viewport" content="width=device-width, initial-scale=1"/>
+<title>Homework: Исходный файл homework5/models/simple.h</title>
+<link href="tabs.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="jquery.js"></script>
+<script type="text/javascript" src="dynsections.js"></script>
+<script type="text/javascript" src="clipboard.js"></script>
+<link href="navtree.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="resize.js"></script>
+<script type="text/javascript" src="cookie.js"></script>
+<link href="search/search.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="search/searchdata.js"></script>
+<script type="text/javascript" src="search/search.js"></script>
+<link href="doxygen.css" rel="stylesheet" type="text/css" />
+</head>
+<body>
+<div id="top"><!-- do not remove this div, it is closed by doxygen! -->
+<div id="titlearea">
+<table cellspacing="0" cellpadding="0">
+ <tbody>
+ <tr id="projectrow">
+  <td id="projectalign">
+   <div id="projectname">Homework
+   </div>
+  </td>
+ </tr>
+ </tbody>
+</table>
+</div>
+<!-- end header part -->
+<!-- Создано системой Doxygen 1.12.0 -->
+<script type="text/javascript">
+/* @license magnet:?xt=urn:btih:d3d9a9a6595521f9666a5e94cc830dab83b65699&amp;dn=expat.txt MIT */
+var searchBox = new SearchBox("searchBox", "search/",'.html');
+/* @license-end */
+</script>
+<script type="text/javascript">
+/* @license magnet:?xt=urn:btih:d3d9a9a6595521f9666a5e94cc830dab83b65699&amp;dn=expat.txt MIT */
+$(function() { codefold.init(0); });
+/* @license-end */
+</script>
+<script type="text/javascript" src="menudata.js"></script>
+<script type="text/javascript" src="menu.js"></script>
+<script type="text/javascript">
+/* @license magnet:?xt=urn:btih:d3d9a9a6595521f9666a5e94cc830dab83b65699&amp;dn=expat.txt MIT */
+$(function() {
+  initMenu('',true,false,'search.php','Поиск',false);
+  $(function() { init_search(); });
+});
+/* @license-end */
+</script>
+<div id="main-nav"></div>
+<script type="text/javascript">
+/* @license magnet:?xt=urn:btih:d3d9a9a6595521f9666a5e94cc830dab83b65699&amp;dn=expat.txt MIT */
+$(function(){ initResizable(false); });
+/* @license-end */
+</script>
+<!-- window showing the filter options -->
+<div id="MSearchSelectWindow"
+     onmouseover="return searchBox.OnSearchSelectShow()"
+     onmouseout="return searchBox.OnSearchSelectHide()"
+     onkeydown="return searchBox.OnSearchSelectKey(event)">
+</div>
+
+<!-- iframe showing the search results (closed by default) -->
+<div id="MSearchResultsWindow">
+<div id="MSearchResults">
+<div class="SRPage">
+<div id="SRIndex">
+<div id="SRResults"></div>
+<div class="SRStatus" id="Loading">Загрузка...</div>
+<div class="SRStatus" id="Searching">Поиск...</div>
+<div class="SRStatus" id="NoMatches">Не найдено</div>
+</div>
+</div>
+</div>
+</div>
+
+<div id="nav-path" class="navpath">
+  <ul>
+<li class="navelem"><a class="el" href="dir_f09de534226032a4314b21ae3e50bff4.html">homework5</a></li><li class="navelem"><a class="el" href="dir_9815c96df86885175c179f8d5e426d66.html">models</a></li>  </ul>
+</div>
+</div><!-- top -->
+<div id="doc-content">
+<div class="header">
+  <div class="headertitle"><div class="title">simple.h</div></div>
+</div><!--header-->
+<div class="contents">
+<a href="simple_8h.html">См. документацию.</a><div class="fragment"><div class="line"><a id="l00001" name="l00001"></a><span class="lineno">    1</span><span class="comment">//</span></div>
+<div class="line"><a id="l00002" name="l00002"></a><span class="lineno">    2</span><span class="comment">// Created by ntikhonov on 15.08.24.</span></div>
+<div class="line"><a id="l00003" name="l00003"></a><span class="lineno">    3</span><span class="comment">//</span></div>
+<div class="line"><a id="l00004" name="l00004"></a><span class="lineno">    4</span> </div>
+<div class="line"><a id="l00005" name="l00005"></a><span class="lineno">    5</span><span class="preprocessor">#ifndef SIMPLE_H</span></div>
+<div class="line"><a id="l00006" name="l00006"></a><span class="lineno">    6</span><span class="preprocessor">#define SIMPLE_H</span></div>
+<div class="line"><a id="l00007" name="l00007"></a><span class="lineno">    7</span><span class="preprocessor">#include &lt;vector&gt;</span></div>
+<div class="line"><a id="l00008" name="l00008"></a><span class="lineno">    8</span> </div>
+<div class="foldopen" id="foldopen00009" data-start="{" data-end="}">
+<div class="line"><a id="l00009" name="l00009"></a><span class="lineno"><a class="line" href="simple_8h.html#a95706d8741dd9e86967609b73117d413">    9</a></span><span class="keyword">inline</span> std::ostream&amp; <a class="code hl_function" href="simple_8h.html#a95706d8741dd9e86967609b73117d413">operator &lt;&lt;</a>(std::ostream&amp; out, <span class="keyword">const</span> std::vector&lt;unsigned int&gt;&amp; data)</div>
+<div class="line"><a id="l00010" name="l00010"></a><span class="lineno">   10</span>{</div>
+<div class="line"><a id="l00011" name="l00011"></a><span class="lineno">   11</span>    <span class="keywordflow">for</span> (<span class="keywordtype">int</span> i = 0; i &lt; data.size(); i += 2)</div>
+<div class="line"><a id="l00012" name="l00012"></a><span class="lineno">   12</span>    {</div>
+<div class="line"><a id="l00013" name="l00013"></a><span class="lineno">   13</span>        out &lt;&lt; <span class="stringliteral">&quot; [&quot;</span> &lt;&lt; data[i] &lt;&lt; <span class="stringliteral">&quot;, &quot;</span> &lt;&lt; data[i + 1] &lt;&lt; <span class="stringliteral">&quot;]&quot;</span>;</div>
+<div class="line"><a id="l00014" name="l00014"></a><span class="lineno">   14</span>    }</div>
+<div class="line"><a id="l00015" name="l00015"></a><span class="lineno">   15</span>    <span class="keywordflow">return</span> out;</div>
+<div class="line"><a id="l00016" name="l00016"></a><span class="lineno">   16</span>}</div>
+</div>
+<div class="line"><a id="l00017" name="l00017"></a><span class="lineno">   17</span> </div>
+<div class="line"><a id="l00018" name="l00018"></a><span class="lineno">   18</span><span class="keyword">namespace </span><a class="code hl_namespace" href="namespacemodels.html">models</a></div>
+<div class="line"><a id="l00019" name="l00019"></a><span class="lineno">   19</span>{</div>
+<div class="foldopen" id="foldopen00020" data-start="{" data-end="};">
+<div class="line"><a id="l00020" name="l00020"></a><span class="lineno"><a class="line" href="classmodels_1_1IShape.html">   20</a></span>    <span class="keyword">class </span><a class="code hl_class" href="classmodels_1_1IShape.html">IShape</a></div>
+<div class="line"><a id="l00021" name="l00021"></a><span class="lineno">   21</span>    {</div>
+<div class="line"><a id="l00022" name="l00022"></a><span class="lineno">   22</span> </div>
+<div class="line"><a id="l00023" name="l00023"></a><span class="lineno">   23</span>    <span class="keyword">protected</span>:</div>
+<div class="line"><a id="l00024" name="l00024"></a><span class="lineno"><a class="line" href="classmodels_1_1IShape.html#a7b0739e8c5e294394a6faf056e7885ac">   24</a></span>        std::pair&lt;unsigned int, unsigned int&gt; <a class="code hl_variable" href="classmodels_1_1IShape.html#a7b0739e8c5e294394a6faf056e7885ac">position</a>;</div>
+<div class="line"><a id="l00025" name="l00025"></a><span class="lineno">   25</span> </div>
+<div class="line"><a id="l00026" name="l00026"></a><span class="lineno">   26</span>    <span class="keyword">public</span>:</div>
+<div class="line"><a id="l00027" name="l00027"></a><span class="lineno"><a class="line" href="classmodels_1_1IShape.html#af81b4700e85337d2b1c75e0103518cb3">   27</a></span>        <span class="keyword">virtual</span> <a class="code hl_function" href="classmodels_1_1IShape.html#af81b4700e85337d2b1c75e0103518cb3">~IShape</a>() = <span class="keywordflow">default</span>;</div>
+<div class="line"><a id="l00028" name="l00028"></a><span class="lineno">   28</span> </div>
+<div class="line"><a id="l00029" name="l00029"></a><span class="lineno"><a class="line" href="classmodels_1_1IShape.html#a972423afa1e371b33c3b3ff9af54ead0">   29</a></span>        <a class="code hl_function" href="classmodels_1_1IShape.html#a972423afa1e371b33c3b3ff9af54ead0">IShape</a>() = <span class="keywordflow">default</span>;</div>
+<div class="foldopen" id="foldopen00030" data-start="{" data-end="}">
+<div class="line"><a id="l00030" name="l00030"></a><span class="lineno"><a class="line" href="classmodels_1_1IShape.html#a1c2d5cafe6ef997da7cb846c7489ee71">   30</a></span>        <a class="code hl_function" href="classmodels_1_1IShape.html#a1c2d5cafe6ef997da7cb846c7489ee71">IShape</a>(<span class="keywordtype">unsigned</span> <span class="keywordtype">int</span> x, <span class="keywordtype">unsigned</span> <span class="keywordtype">int</span> y) : <a class="code hl_variable" href="classmodels_1_1IShape.html#a7b0739e8c5e294394a6faf056e7885ac">position</a>(x, y)</div>
+<div class="line"><a id="l00031" name="l00031"></a><span class="lineno">   31</span>        {}</div>
+</div>
+<div class="line"><a id="l00032" name="l00032"></a><span class="lineno">   32</span> </div>
+<div class="line"><a id="l00033" name="l00033"></a><span class="lineno"><a class="line" href="classmodels_1_1IShape.html#ab716cae8386aee8664bad91d8c416ba8">   33</a></span>        <span class="keyword">virtual</span> std::vector&lt;unsigned int&gt; <a class="code hl_function" href="classmodels_1_1IShape.html#ab716cae8386aee8664bad91d8c416ba8">get_points</a>() = 0;</div>
+<div class="line"><a id="l00034" name="l00034"></a><span class="lineno">   34</span>    };</div>
+</div>
+<div class="line"><a id="l00035" name="l00035"></a><span class="lineno">   35</span> </div>
+<div class="foldopen" id="foldopen00036" data-start="{" data-end="};">
+<div class="line"><a id="l00036" name="l00036"></a><span class="lineno"><a class="line" href="classmodels_1_1Square.html">   36</a></span>    <span class="keyword">class </span><a class="code hl_class" href="classmodels_1_1Square.html">Square</a> : <span class="keyword">public</span> <a class="code hl_class" href="classmodels_1_1IShape.html">IShape</a></div>
+<div class="line"><a id="l00037" name="l00037"></a><span class="lineno">   37</span>    {</div>
+<div class="line"><a id="l00038" name="l00038"></a><span class="lineno">   38</span>        <span class="keywordtype">int</span> width = 0;</div>
+<div class="line"><a id="l00039" name="l00039"></a><span class="lineno">   39</span>        <span class="keywordtype">int</span> height = 0;</div>
+<div class="line"><a id="l00040" name="l00040"></a><span class="lineno">   40</span>    <span class="keyword">public</span>:</div>
+<div class="line"><a id="l00041" name="l00041"></a><span class="lineno"><a class="line" href="classmodels_1_1Square.html#ab4b823978fdee32067e55e8ee25c1eb5">   41</a></span>        <a class="code hl_function" href="classmodels_1_1Square.html#ab4b823978fdee32067e55e8ee25c1eb5">Square</a>() = <span class="keywordflow">default</span>;</div>
+<div class="line"><a id="l00042" name="l00042"></a><span class="lineno"><a class="line" href="classmodels_1_1Square.html#a649671cc7ff01819e6ed4f2ee7785036">   42</a></span>        <a class="code hl_function" href="classmodels_1_1Square.html#a649671cc7ff01819e6ed4f2ee7785036">Square</a>(<span class="keywordtype">unsigned</span> <span class="keywordtype">int</span> x, <span class="keywordtype">unsigned</span> <span class="keywordtype">int</span> y, <span class="keywordtype">unsigned</span> <span class="keywordtype">int</span> width, <span class="keywordtype">unsigned</span> <span class="keywordtype">int</span> height) : <a class="code hl_class" href="classmodels_1_1IShape.html">IShape</a>(x, y), width(width), height(height) {};</div>
+<div class="foldopen" id="foldopen00043" data-start="{" data-end="}">
+<div class="line"><a id="l00043" name="l00043"></a><span class="lineno"><a class="line" href="classmodels_1_1Square.html#a372898488a19db6447eab393422fa80f">   43</a></span>        std::vector&lt;unsigned int&gt; <a class="code hl_function" href="classmodels_1_1Square.html#a372898488a19db6447eab393422fa80f">get_points</a>()<span class="keyword"> override</span></div>
+<div class="line"><a id="l00044" name="l00044"></a><span class="lineno">   44</span><span class="keyword">        </span>{</div>
+<div class="line"><a id="l00045" name="l00045"></a><span class="lineno">   45</span>            <span class="keywordflow">return</span> {</div>
+<div class="line"><a id="l00046" name="l00046"></a><span class="lineno">   46</span>                <a class="code hl_variable" href="classmodels_1_1IShape.html#a7b0739e8c5e294394a6faf056e7885ac">position</a>.first, <a class="code hl_variable" href="classmodels_1_1IShape.html#a7b0739e8c5e294394a6faf056e7885ac">position</a>.second,</div>
+<div class="line"><a id="l00047" name="l00047"></a><span class="lineno">   47</span>                <a class="code hl_variable" href="classmodels_1_1IShape.html#a7b0739e8c5e294394a6faf056e7885ac">position</a>.first + width, <a class="code hl_variable" href="classmodels_1_1IShape.html#a7b0739e8c5e294394a6faf056e7885ac">position</a>.second,</div>
+<div class="line"><a id="l00048" name="l00048"></a><span class="lineno">   48</span>                <a class="code hl_variable" href="classmodels_1_1IShape.html#a7b0739e8c5e294394a6faf056e7885ac">position</a>.first, <a class="code hl_variable" href="classmodels_1_1IShape.html#a7b0739e8c5e294394a6faf056e7885ac">position</a>.second + height,</div>
+<div class="line"><a id="l00049" name="l00049"></a><span class="lineno">   49</span>                <a class="code hl_variable" href="classmodels_1_1IShape.html#a7b0739e8c5e294394a6faf056e7885ac">position</a>.first + width, <a class="code hl_variable" href="classmodels_1_1IShape.html#a7b0739e8c5e294394a6faf056e7885ac">position</a>.second + height</div>
+<div class="line"><a id="l00050" name="l00050"></a><span class="lineno">   50</span>            };</div>
+<div class="line"><a id="l00051" name="l00051"></a><span class="lineno">   51</span>        }</div>
+</div>
+<div class="line"><a id="l00052" name="l00052"></a><span class="lineno">   52</span>    };</div>
+</div>
+<div class="line"><a id="l00053" name="l00053"></a><span class="lineno">   53</span> </div>
+<div class="foldopen" id="foldopen00054" data-start="{" data-end="};">
+<div class="line"><a id="l00054" name="l00054"></a><span class="lineno"><a class="line" href="classmodels_1_1Triangle.html">   54</a></span>    <span class="keyword">class </span><a class="code hl_class" href="classmodels_1_1Triangle.html">Triangle</a> : <span class="keyword">public</span>  <a class="code hl_class" href="classmodels_1_1IShape.html">IShape</a></div>
+<div class="line"><a id="l00055" name="l00055"></a><span class="lineno">   55</span>    {</div>
+<div class="line"><a id="l00056" name="l00056"></a><span class="lineno">   56</span>        <span class="keywordtype">int</span> leg1 = 0;</div>
+<div class="line"><a id="l00057" name="l00057"></a><span class="lineno">   57</span>        <span class="keywordtype">int</span> leg2 = 0;</div>
+<div class="line"><a id="l00058" name="l00058"></a><span class="lineno">   58</span> </div>
+<div class="line"><a id="l00059" name="l00059"></a><span class="lineno">   59</span>    <span class="keyword">public</span>:</div>
+<div class="line"><a id="l00060" name="l00060"></a><span class="lineno"><a class="line" href="classmodels_1_1Triangle.html#a203919123c0540b4c2c64eb63acc5384">   60</a></span>        <a class="code hl_function" href="classmodels_1_1Triangle.html#a203919123c0540b4c2c64eb63acc5384">Triangle</a>() = <span class="keywordflow">default</span>;</div>
+<div class="line"><a id="l00061" name="l00061"></a><span class="lineno"><a class="line" href="classmodels_1_1Triangle.html#a4bc4847bab4584cf34f8596886a1179a">   61</a></span>        <a class="code hl_function" href="classmodels_1_1Triangle.html#a4bc4847bab4584cf34f8596886a1179a">Triangle</a>(<span class="keywordtype">unsigned</span> <span class="keywordtype">int</span> x, <span class="keywordtype">unsigned</span> <span class="keywordtype">int</span> y, <span class="keywordtype">unsigned</span> <span class="keywordtype">int</span> leg1, <span class="keywordtype">unsigned</span> <span class="keywordtype">int</span> leg2) : <a class="code hl_class" href="classmodels_1_1IShape.html">IShape</a>(x, y), leg1(leg1), leg2(leg2) {};</div>
+<div class="foldopen" id="foldopen00062" data-start="{" data-end="}">
+<div class="line"><a id="l00062" name="l00062"></a><span class="lineno"><a class="line" href="classmodels_1_1Triangle.html#a54f0c48c42c97d0781bac4200ea92e1e">   62</a></span>        std::vector&lt;unsigned int&gt; <a class="code hl_function" href="classmodels_1_1Triangle.html#a54f0c48c42c97d0781bac4200ea92e1e">get_points</a>()<span class="keyword"> override</span></div>
+<div class="line"><a id="l00063" name="l00063"></a><span class="lineno">   63</span><span class="keyword">        </span>{</div>
+<div class="line"><a id="l00064" name="l00064"></a><span class="lineno">   64</span>            <span class="keywordflow">return</span> {</div>
+<div class="line"><a id="l00065" name="l00065"></a><span class="lineno">   65</span>                <a class="code hl_variable" href="classmodels_1_1IShape.html#a7b0739e8c5e294394a6faf056e7885ac">position</a>.first, <a class="code hl_variable" href="classmodels_1_1IShape.html#a7b0739e8c5e294394a6faf056e7885ac">position</a>.second,</div>
+<div class="line"><a id="l00066" name="l00066"></a><span class="lineno">   66</span>                <a class="code hl_variable" href="classmodels_1_1IShape.html#a7b0739e8c5e294394a6faf056e7885ac">position</a>.first + leg1, <a class="code hl_variable" href="classmodels_1_1IShape.html#a7b0739e8c5e294394a6faf056e7885ac">position</a>.second,</div>
+<div class="line"><a id="l00067" name="l00067"></a><span class="lineno">   67</span>                <a class="code hl_variable" href="classmodels_1_1IShape.html#a7b0739e8c5e294394a6faf056e7885ac">position</a>.first + leg1, <a class="code hl_variable" href="classmodels_1_1IShape.html#a7b0739e8c5e294394a6faf056e7885ac">position</a>.second + leg2</div>
+<div class="line"><a id="l00068" name="l00068"></a><span class="lineno">   68</span>            };</div>
+<div class="line"><a id="l00069" name="l00069"></a><span class="lineno">   69</span>        }</div>
+</div>
+<div class="line"><a id="l00070" name="l00070"></a><span class="lineno">   70</span>    };</div>
+</div>
+<div class="line"><a id="l00071" name="l00071"></a><span class="lineno">   71</span> </div>
+<div class="foldopen" id="foldopen00072" data-start="{" data-end="};">
+<div class="line"><a id="l00072" name="l00072"></a><span class="lineno"><a class="line" href="classmodels_1_1Line.html">   72</a></span>    <span class="keyword">class </span><a class="code hl_class" href="classmodels_1_1Line.html">Line</a> : <span class="keyword">public</span> <a class="code hl_class" href="classmodels_1_1IShape.html">IShape</a></div>
+<div class="line"><a id="l00073" name="l00073"></a><span class="lineno">   73</span>    {</div>
+<div class="line"><a id="l00074" name="l00074"></a><span class="lineno">   74</span>        std::pair&lt;unsigned int, unsigned int&gt; point;</div>
+<div class="line"><a id="l00075" name="l00075"></a><span class="lineno">   75</span> </div>
+<div class="line"><a id="l00076" name="l00076"></a><span class="lineno">   76</span>    <span class="keyword">public</span>:</div>
+<div class="line"><a id="l00077" name="l00077"></a><span class="lineno"><a class="line" href="classmodels_1_1Line.html#a49044c801532da2bd7adfc78304559c8">   77</a></span>        <a class="code hl_function" href="classmodels_1_1Line.html#a49044c801532da2bd7adfc78304559c8">Line</a>() = <span class="keywordflow">default</span>;</div>
+<div class="line"><a id="l00078" name="l00078"></a><span class="lineno"><a class="line" href="classmodels_1_1Line.html#a223984d68b835ffb02580d3b109318aa">   78</a></span>        <a class="code hl_function" href="classmodels_1_1Line.html#a223984d68b835ffb02580d3b109318aa">Line</a>(<span class="keywordtype">unsigned</span> <span class="keywordtype">int</span> x, <span class="keywordtype">unsigned</span> <span class="keywordtype">int</span> y, <span class="keywordtype">unsigned</span> <span class="keywordtype">int</span> x2, <span class="keywordtype">unsigned</span> <span class="keywordtype">int</span> y2) : <a class="code hl_class" href="classmodels_1_1IShape.html">IShape</a>(x, y), point(x2, y2) {};</div>
+<div class="foldopen" id="foldopen00079" data-start="{" data-end="}">
+<div class="line"><a id="l00079" name="l00079"></a><span class="lineno"><a class="line" href="classmodels_1_1Line.html#a7056ede720183ca286e622e1267c0dfc">   79</a></span>        std::vector&lt;unsigned int&gt; <a class="code hl_function" href="classmodels_1_1Line.html#a7056ede720183ca286e622e1267c0dfc">get_points</a>()<span class="keyword"> override</span></div>
+<div class="line"><a id="l00080" name="l00080"></a><span class="lineno">   80</span><span class="keyword">        </span>{</div>
+<div class="line"><a id="l00081" name="l00081"></a><span class="lineno">   81</span>            <span class="keywordflow">return</span> {</div>
+<div class="line"><a id="l00082" name="l00082"></a><span class="lineno">   82</span>                <a class="code hl_variable" href="classmodels_1_1IShape.html#a7b0739e8c5e294394a6faf056e7885ac">position</a>.first, <a class="code hl_variable" href="classmodels_1_1IShape.html#a7b0739e8c5e294394a6faf056e7885ac">position</a>.second,</div>
+<div class="line"><a id="l00083" name="l00083"></a><span class="lineno">   83</span>                <a class="code hl_variable" href="classmodels_1_1IShape.html#a7b0739e8c5e294394a6faf056e7885ac">position</a>.first + point.first, <a class="code hl_variable" href="classmodels_1_1IShape.html#a7b0739e8c5e294394a6faf056e7885ac">position</a>.second + point.second</div>
+<div class="line"><a id="l00084" name="l00084"></a><span class="lineno">   84</span>            };</div>
+<div class="line"><a id="l00085" name="l00085"></a><span class="lineno">   85</span>        }</div>
+</div>
+<div class="line"><a id="l00086" name="l00086"></a><span class="lineno">   86</span>    };</div>
+</div>
+<div class="line"><a id="l00087" name="l00087"></a><span class="lineno">   87</span>}</div>
+<div class="line"><a id="l00088" name="l00088"></a><span class="lineno">   88</span> </div>
+<div class="line"><a id="l00089" name="l00089"></a><span class="lineno">   89</span><span class="preprocessor">#endif </span><span class="comment">//SIMPLE_H</span></div>
+<div class="ttc" id="aclassmodels_1_1IShape_html"><div class="ttname"><a href="classmodels_1_1IShape.html">models::IShape</a></div><div class="ttdef"><b>Definition</b> simple.h:21</div></div>
+<div class="ttc" id="aclassmodels_1_1IShape_html_a1c2d5cafe6ef997da7cb846c7489ee71"><div class="ttname"><a href="classmodels_1_1IShape.html#a1c2d5cafe6ef997da7cb846c7489ee71">models::IShape::IShape</a></div><div class="ttdeci">IShape(unsigned int x, unsigned int y)</div><div class="ttdef"><b>Definition</b> simple.h:30</div></div>
+<div class="ttc" id="aclassmodels_1_1IShape_html_a7b0739e8c5e294394a6faf056e7885ac"><div class="ttname"><a href="classmodels_1_1IShape.html#a7b0739e8c5e294394a6faf056e7885ac">models::IShape::position</a></div><div class="ttdeci">std::pair&lt; unsigned int, unsigned int &gt; position</div><div class="ttdef"><b>Definition</b> simple.h:24</div></div>
+<div class="ttc" id="aclassmodels_1_1IShape_html_a972423afa1e371b33c3b3ff9af54ead0"><div class="ttname"><a href="classmodels_1_1IShape.html#a972423afa1e371b33c3b3ff9af54ead0">models::IShape::IShape</a></div><div class="ttdeci">IShape()=default</div></div>
+<div class="ttc" id="aclassmodels_1_1IShape_html_ab716cae8386aee8664bad91d8c416ba8"><div class="ttname"><a href="classmodels_1_1IShape.html#ab716cae8386aee8664bad91d8c416ba8">models::IShape::get_points</a></div><div class="ttdeci">virtual std::vector&lt; unsigned int &gt; get_points()=0</div></div>
+<div class="ttc" id="aclassmodels_1_1IShape_html_af81b4700e85337d2b1c75e0103518cb3"><div class="ttname"><a href="classmodels_1_1IShape.html#af81b4700e85337d2b1c75e0103518cb3">models::IShape::~IShape</a></div><div class="ttdeci">virtual ~IShape()=default</div></div>
+<div class="ttc" id="aclassmodels_1_1Line_html"><div class="ttname"><a href="classmodels_1_1Line.html">models::Line</a></div><div class="ttdef"><b>Definition</b> simple.h:73</div></div>
+<div class="ttc" id="aclassmodels_1_1Line_html_a223984d68b835ffb02580d3b109318aa"><div class="ttname"><a href="classmodels_1_1Line.html#a223984d68b835ffb02580d3b109318aa">models::Line::Line</a></div><div class="ttdeci">Line(unsigned int x, unsigned int y, unsigned int x2, unsigned int y2)</div><div class="ttdef"><b>Definition</b> simple.h:78</div></div>
+<div class="ttc" id="aclassmodels_1_1Line_html_a49044c801532da2bd7adfc78304559c8"><div class="ttname"><a href="classmodels_1_1Line.html#a49044c801532da2bd7adfc78304559c8">models::Line::Line</a></div><div class="ttdeci">Line()=default</div></div>
+<div class="ttc" id="aclassmodels_1_1Line_html_a7056ede720183ca286e622e1267c0dfc"><div class="ttname"><a href="classmodels_1_1Line.html#a7056ede720183ca286e622e1267c0dfc">models::Line::get_points</a></div><div class="ttdeci">std::vector&lt; unsigned int &gt; get_points() override</div><div class="ttdef"><b>Definition</b> simple.h:79</div></div>
+<div class="ttc" id="aclassmodels_1_1Square_html"><div class="ttname"><a href="classmodels_1_1Square.html">models::Square</a></div><div class="ttdef"><b>Definition</b> simple.h:37</div></div>
+<div class="ttc" id="aclassmodels_1_1Square_html_a372898488a19db6447eab393422fa80f"><div class="ttname"><a href="classmodels_1_1Square.html#a372898488a19db6447eab393422fa80f">models::Square::get_points</a></div><div class="ttdeci">std::vector&lt; unsigned int &gt; get_points() override</div><div class="ttdef"><b>Definition</b> simple.h:43</div></div>
+<div class="ttc" id="aclassmodels_1_1Square_html_a649671cc7ff01819e6ed4f2ee7785036"><div class="ttname"><a href="classmodels_1_1Square.html#a649671cc7ff01819e6ed4f2ee7785036">models::Square::Square</a></div><div class="ttdeci">Square(unsigned int x, unsigned int y, unsigned int width, unsigned int height)</div><div class="ttdef"><b>Definition</b> simple.h:42</div></div>
+<div class="ttc" id="aclassmodels_1_1Square_html_ab4b823978fdee32067e55e8ee25c1eb5"><div class="ttname"><a href="classmodels_1_1Square.html#ab4b823978fdee32067e55e8ee25c1eb5">models::Square::Square</a></div><div class="ttdeci">Square()=default</div></div>
+<div class="ttc" id="aclassmodels_1_1Triangle_html"><div class="ttname"><a href="classmodels_1_1Triangle.html">models::Triangle</a></div><div class="ttdef"><b>Definition</b> simple.h:55</div></div>
+<div class="ttc" id="aclassmodels_1_1Triangle_html_a203919123c0540b4c2c64eb63acc5384"><div class="ttname"><a href="classmodels_1_1Triangle.html#a203919123c0540b4c2c64eb63acc5384">models::Triangle::Triangle</a></div><div class="ttdeci">Triangle()=default</div></div>
+<div class="ttc" id="aclassmodels_1_1Triangle_html_a4bc4847bab4584cf34f8596886a1179a"><div class="ttname"><a href="classmodels_1_1Triangle.html#a4bc4847bab4584cf34f8596886a1179a">models::Triangle::Triangle</a></div><div class="ttdeci">Triangle(unsigned int x, unsigned int y, unsigned int leg1, unsigned int leg2)</div><div class="ttdef"><b>Definition</b> simple.h:61</div></div>
+<div class="ttc" id="aclassmodels_1_1Triangle_html_a54f0c48c42c97d0781bac4200ea92e1e"><div class="ttname"><a href="classmodels_1_1Triangle.html#a54f0c48c42c97d0781bac4200ea92e1e">models::Triangle::get_points</a></div><div class="ttdeci">std::vector&lt; unsigned int &gt; get_points() override</div><div class="ttdef"><b>Definition</b> simple.h:62</div></div>
+<div class="ttc" id="anamespacemodels_html"><div class="ttname"><a href="namespacemodels.html">models</a></div><div class="ttdef"><b>Definition</b> document.h:15</div></div>
+<div class="ttc" id="asimple_8h_html_a95706d8741dd9e86967609b73117d413"><div class="ttname"><a href="simple_8h.html#a95706d8741dd9e86967609b73117d413">operator&lt;&lt;</a></div><div class="ttdeci">std::ostream &amp; operator&lt;&lt;(std::ostream &amp;out, const std::vector&lt; unsigned int &gt; &amp;data)</div><div class="ttdef"><b>Definition</b> simple.h:9</div></div>
+</div><!-- fragment --></div><!-- contents -->
+<!-- start footer part -->
+<hr class="footer"/><address class="footer"><small>
+Создано системой&#160;<a href="https://www.doxygen.org/index.html"><img class="footer" src="doxygen.svg" width="104" height="31" alt="doxygen"/></a> 1.12.0
+</small></address>
+</div><!-- doc-content -->
+</body>
+</html>
