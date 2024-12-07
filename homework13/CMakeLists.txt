@@ -2,7 +2,7 @@ cmake_minimum_required(VERSION 3.2)
 
 project(fashion_mnist)
 
-add_executable(${PROJECT_NAME} main.cpp mlp_classifier.h classifier.h)
+add_executable(${PROJECT_NAME} main.cpp)
 
 set_target_properties(${PROJECT_NAME} PROPERTIES
         CXX_STANDARD 14
