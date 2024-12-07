@@ -2,11 +2,10 @@ cmake_minimum_required(VERSION 3.2)
 
 project(fashion_mnist)
 
-
 add_executable(${PROJECT_NAME} main.cpp mlp_classifier.h classifier.h)
 
 set_target_properties(${PROJECT_NAME} PROPERTIES
-        CXX_STANDARD 20
+        CXX_STANDARD 14
         CXX_STANDARD_REQUIRED ON
 )
 
