@@ -1,3 +1,5 @@
+// Реализация простейшей SQL-подобной in-memory БД
+
 #include <iostream>
 #include <thread>
 

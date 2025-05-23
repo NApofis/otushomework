@@ -1,5 +1,6 @@
 //
 // Created by ntikhonov on 20.08.24.
+// Бесконечная разреженная матрица, с использованием паттерна Proxy
 //
 #include <assert.h>
 #include <stdexcept>

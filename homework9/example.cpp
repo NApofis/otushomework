@@ -1,3 +1,5 @@
+// Реализация многопоточных алгоритмов, включая работу с примитивами синхронизации потоков из STL.
+
 #include <iostream>
 #include <thread>
 #include <algorithm>

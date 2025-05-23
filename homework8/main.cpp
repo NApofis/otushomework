@@ -1,5 +1,6 @@
 //
 // Created by ntikhonov on 21.09.24.
+// Полезная утилита для быстрого поиска дублирующихся по содержимому файлов с использованием Boost
 //
 
 #include <boost/program_options.hpp>

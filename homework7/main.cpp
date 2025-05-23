@@ -1,6 +1,8 @@
 //
 // Created by ntikhonov on 20.08.24.
+// Утилита для парсинга и комплексного логгирования пакетных команд
 //
+
 #include <iostream>
 #include "chain.h"
 #include "block.h"
