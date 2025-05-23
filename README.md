@@ -1,1 +1,1 @@
-Задания для обучения OTUS/
+Решения для заданий из обучения OTUS  C++ Developer Professional
